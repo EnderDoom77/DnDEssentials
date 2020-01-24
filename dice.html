@@ -10,6 +10,8 @@
 
     <link href="style.css" rel="stylesheet" type="text/css">
 
+    <script src="dice-roll.js"></script>
+
 </head>
 <body>
     <div class="parallax">
@@ -71,14 +73,62 @@
                 <p>A few examples could be: <br>
                 <span class="code-block code-block-inline font-yellow">4d4</span>: Roll 4 four-sided dice and add them together.</p>
                 <div class="code-block" style="text-align: center;">
-                    <p id="diceroll1" style="font-size: 1.5em"><span class="font-soft-red">1 + 4 + 3 + 3 </span><span class="font-soft-green">(+0)</span></p>
-                    <p id="diceresult1" style="font-size: 2em">= 11</p>
-                    <button style="font-size: 2em">
+                    <span id="dice0">
+                    <p style="font-size: 1.5em">
+                        <span class="font-soft-red"></span>
+                        <span class="font-soft-green"></span>
+                    </p>
+                    <p style="font-size: 2em"></p>
+                    </span>
+                    <button onclick="rollDice('dice0', 4, 4)" style="font-size: 2em">
                         Reroll!
                     </button>
                 </div>
                 <span class="code-block code-block-inline font-yellow">1d12 + 4</span>: Roll a twelve-sided die and add four to the result.</p>
-                <span class="code-block code-block-inline font-yellow">2d6 + 3</span> Roll two six-sided dice and then add three to the end result.</p>
+                <div class="code-block" style="text-align: center;">
+                    <span id="dice1">
+                    <p style="font-size: 1.5em">
+                        <span class="font-soft-red"></span>
+                        <span class="font-soft-green"></span>
+                    </p>
+                    <p style="font-size: 2em"></p>
+                    </span>
+                    <button onclick="rollDice('dice1', 1, 12, 4)" style="font-size: 2em">
+                        Reroll!
+                    </button>
+                </div>
+                <span class="code-block code-block-inline font-yellow">2d6 - 3</span> Roll two six-sided dice and then subtract three from the end result.</p>
+                <div class="code-block" style="text-align: center;">
+                    <span id="dice2">
+                    <p style="font-size: 1.5em">
+                        <span class="font-soft-red"></span>
+                        <span class="font-soft-green"></span>
+                    </p>
+                    <p style="font-size: 2em"></p>
+                    </span>
+                    <button onclick="rollDice('dice2', 2, 6, -3)" style="font-size: 2em">
+                        Reroll!
+                    </button>
+                </div>
+                <script>
+                    rollDice('dice0', 4, 4);
+                    rollDice('dice1', 1, 12, 4);
+                    rollDice('dice2', 2, 6, 3);
+                </script>
+                <p>Try it out yourself!</p>
+                <span class="code-block code-block-inline font-yellow"><input id="diceinput" class="textbox-discrete" type="text" placeholder="NdD+MOD"></span>
+                <div class="code-block" style="text-align: center;">
+                    <span id="dice3">
+                    <p style="font-size: 1.5em">
+                        <span class="font-soft-red"></span>
+                        <span class="font-soft-green"></span>
+                    </p>
+                    <p style="font-size: 2em"></p>
+                    </span>
+                    <button onclick="rollDiceFromTextElement('dice3', 'diceinput')" style="font-size: 2em">
+                        Reroll!
+                    </button>
+                </div>
                 <p>To try out basic dice rolling, check out <a href="https://www.google.com/search?q=dice+roller">Google's embedded dice roller</a>.</p>
             </div>
         </div>

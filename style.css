@@ -35,13 +35,13 @@ img {
 
 .code-block {
     display: block;
-    margin: 0 5%;
+    margin: 1em 5%;
     padding: 1em;
     font-family: monospace, sans-serif;
     border: solid;
     border-radius: 0.75em;
     border-color: #555;
-    border-width: 10px;
+    border-width: 5px;
     background-color: #0a0a0a;
     color: #bbb;
     font-weight: 400;
@@ -50,7 +50,7 @@ img {
 .code-block-inline {
     display: inline-block;
     margin: 0;
-    padding: 0.1em 0.3em;
+    padding: 0.3em;
     border-radius: 0.3em;
     border-width: 3px;
 }
@@ -177,6 +177,13 @@ button {
         border-color: #33ff33;
         cursor: url(Cursor/PointerGreen32.png), auto;
     }
+
+.textbox-discrete {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+}
 
 .row {
     width: 100%;
