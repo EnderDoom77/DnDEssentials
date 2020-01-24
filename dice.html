@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- meta viewport> -->
+    <title>D&amp;D Essentials &mdash; Dice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="parallax">
+        <div class="parallax__layer parallax__layer--back">
+
+            <img src="https://drive.google.com/uc?id=1RNAR82_-AZMrHbvoyRjffWsbPXiBp1w3" alt="background" />
+
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+            <div class="header">
+                <h1>D&amp;D Essentials</h1>
+                <p>Give a jump-start to your roleplaying potential!</p>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" title="Back to main menu.">HOME</a></li>
+                        <li><a href="lexicon.html" title="What jargon do we use to play D&D?">LEXICON REFERENCE</a></li>
+                        <li><a href="https://discord.gg/EhKZjjW" title="Join us on Discord!">DISCORD</a></li>
+                        <li><a href="https://www.dndbeyond.com/" title="Check out D&D beyond!">D&amp;D BEYOND</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="container container-base">
+                <h1>DICE</h1>
+                <h2>Power dice</h2>
+                <p>These dice are the type you'll use to roll for things like damage, healing, or other effects that require a random number for generic intents.</p>
+                <p>For instance, spells like <a href="https://www.dndbeyond.com/spells/fireball">Fireball</a> require rolling 8d6, meaning 8 six-sided die.</p>
+                <p>Basic weapon damage is calculated by rolling the die related to the weapon and then adding your <a href="lexicon.html#entry_strength">Strength</a> or <a href="lexicon.html#entry_dexterity">Dexterity</a> modifier. For more information on attacks, check out <a href="attacks.html">Attacks</a>.</p>
+                <p class="note">Some d10s contain a 0 instead of a 10, this result is a 10 and <b>not</b> a 0.</p>
+                <div style="font-size: 0">
+                    <img style="width: 20%;" src="https://cdn11.bigcommerce.com/s-70184/images/stencil/350x350/products/2926/7133/opaque-black-gold-d4-top-read__88796.1522184156.jpg?c=2" alt="A four-sided die">
+                    <img style="width: 20%;" src="https://www.pinclipart.com/picdir/big/25-250576_dice-clipart-6-sided-dice-png-transparent-png.png" alt="A six-sided die">
+                    <img style="width: 20%;" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Dice_rpg.png" alt="An eight-sided die">
+                    <img style="width: 20%;" src="https://lh3.googleusercontent.com/nDFCHvO9bjEHPImhbMUwyd2RhWjBBK8B-zqhMPegqb8yjdY7g33uPU3oOiXHcwmdZA" alt="A ten-sided die">
+                    <img style="width: 20%;" src="https://i.imgur.com/xCMEgW6.png" alt="A twelve-sided die">
+                </div>
+                <h2>The d20; check die.</h2>
+                <p>The d20 is by far the most used die in the whole game, it's used to calculate every type of check that may result is a failure or success.</p>
+                <p>It's used for <a href="ability-checks.html">Ability Checks</a>, <a href="saving-throws.html">Saving Throws</a>, and <a href="attacks.html">Attacks</a>. In any of these checks, one is trying to beat a given number with the value rolled in the d20 + any relevant modifiers.</p>
+                <p>You may sometimes be asked to roll with advantage or disadvantage. When rolling with advantage, roll 2d20 and take the value of the highest one. When rolling with disadvantage, roll 2d20 and take the lowest.</p>
+                <p>Advantage and disadvantage don't stack, so you can only roll up to 2d20. If a roll would be made with both advantage and disadvantage, simply roll as normal.</p>
+                <div class="section-block">
+                    <img class="img-minor" src="http://dragons.ie/wp-content/uploads/2018/11/d20.png" alt="A twenty-sided die">
+                </div>
+                <h2>The d100; percentile dice.</h2>
+                <p>In very few occasions, an event occurs which can lead to many different options, when this happens, roll a d100.</p>
+                <p>A d100 roll consists of rolling 2d10 where one is marked as the "tens" die and the other is marked as the "units" die. Simply mash the numbers together to obtain your result.</p>
+                <p>The d10 contains a 0, charts generally contain "00" instead of "100", in either case, rolling two tens is a 100.</p>
+                <div class="section-block">
+                    <img class="img-minor" src="https://i.ebayimg.com/images/g/g6AAAOSwEzxYS2Zn/s-l300.jpg" alt="Two ten-sided die, one with the tens and the other with units.">
+                </div>
+                <h2>How to read dice rolls in rules.</h2>
+                <p>Generally, dice rolling in the rules is expressed in the following format:</p>
+                <div class="code-block">
+                    <p style="text-align: center; font-size: 2em"><span class="font-soft-red">[n]</span><span class="font-soft-blue">d</span><span class="font-soft-orange">[D]</span><span class="font-soft-green">(+mod)</span></p>
+                    <p><span class="font-soft-red">n = number of dice to roll.</span></p>
+                    <p><span class="font-soft-orange">D = type of die to roll. e.g. A d6 is a 6-sided die.</span></p>
+                    <p><span class="font-soft-green">mod = a modifier, it's added to the result of the final roll to obtain the total.</span></p>
+                </div>
+                <p>A few examples could be: <br>
+                <span class="code-block code-block-inline font-yellow">4d4</span>: Roll 4 four-sided dice and add them together.</p>
+                <div class="code-block" style="text-align: center;">
+                    <p id="diceroll1" style="font-size: 1.5em"><span class="font-soft-red">1 + 4 + 3 + 3 </span><span class="font-soft-green">(+0)</span></p>
+                    <p id="diceresult1" style="font-size: 2em">= 11</p>
+                    <button style="font-size: 2em">
+                        Reroll!
+                    </button>
+                </div>
+                <span class="code-block code-block-inline font-yellow">1d12 + 4</span>: Roll a twelve-sided die and add four to the result.</p>
+                <span class="code-block code-block-inline font-yellow">2d6 + 3</span> Roll two six-sided dice and then add three to the end result.</p>
+                <p>To try out basic dice rolling, check out <a href="https://www.google.com/search?q=dice+roller">Google's embedded dice roller</a>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
