@@ -15,6 +15,10 @@ function rollDice(displayID, n, d, mod = 0)
         {
             rolls += " <span class=\"highlight-fail\">" + numbers[i] + "</span> + ";
         }
+        else if(numbers[i] === 1)
+        {
+            rolls += " <span class=\"font-red\">" + numbers[i] + "</span> + ";
+        }
         else
         {
         rolls += numbers[i] + " + ";
@@ -47,7 +51,14 @@ function rollDiceFromText(displayID, str)
         
         if(element === "d" || element === "D")
         {
-            n = parseInt(str.substring(0, i));
+            if(i == 0)
+            {
+                n = 1;
+            }
+            else
+            {
+                n = parseInt(str.substring(0, i));
+            }
             dSeparatorIndex = i;
         }
         else if ((element === "+" || element === "-") && dSeparatorIndex != 0) {
