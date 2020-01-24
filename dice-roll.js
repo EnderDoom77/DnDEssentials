@@ -7,7 +7,18 @@ function rollDice(displayID, n, d, mod = 0)
 
     for (let i = 0; i < Math.abs(n); i++) {
         numbers[i] = (Math.floor(Math.random() * d) + 1) * (n < 0 ? -1 : 1);
+        if(numbers[i] === d && d >= 20)
+        {
+            rolls += " <span class=\"highlight-crit\">" + numbers[i] + "</span> + ";
+        }
+        else if(numbers[i] === 1 && d >= 20)
+        {
+            rolls += " <span class=\"highlight-fail\">" + numbers[i] + "</span> + ";
+        }
+        else
+        {
         rolls += numbers[i] + " + ";
+        }
     }
 
     rolls = rolls.substring(0, rolls.length - 3);

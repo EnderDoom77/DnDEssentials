@@ -166,6 +166,20 @@ nav li {
     color: #aab;
 }
 
+.highlight-crit {
+    background: linear-gradient(60deg, #0a0, #0a6);
+    color: #fff;
+    border-radius: 0.2em;
+    padding: 0 0.5em;
+}
+
+.highlight-fail {
+    background: linear-gradient(60deg, #f44, #f92);
+    color: #000;
+    border-radius: 0.2em;
+    padding: 0 0.5em;
+}
+
 button {
     background: linear-gradient(90deg, #00ccff, #6600dd);
     color: white;
