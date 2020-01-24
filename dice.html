@@ -73,56 +73,60 @@
                 </div>
                 <p>A few examples could be: <br>
                 <span class="code-block code-block-inline font-yellow">4d4</span>: Roll 4 four-sided dice and add them together.</p>
-                <div class="code-block" style="text-align: center;">
+                <div class="code-block code-block-display">
                     <span id="dice0">
-                    <p style="font-size: 1.5em">
+                    <p style="font-size: 0.75em">
                         <span class="font-soft-red"></span>
                         <span class="font-soft-green"></span>
                     </p>
-                    <p style="font-size: 2em"></p>
+                    <p></p>
                     </span>
-                    <button onclick="rollDice('dice0', 4, 4)" style="font-size: 2em">
-                        Reroll!
+                    <button onclick="rollDice('dice0', 4, 4)" class="button-flex">
+                        <img src="http://www.free-icons-download.net/images/white-dice-icons-36661.png" alt="roll">
+                        <p>Reroll!</p>
                     </button>
                 </div>
                 <span class="code-block code-block-inline font-yellow">1d12 + 4</span>: Roll a twelve-sided die and add four to the result.</p>
-                <div class="code-block" style="text-align: center;">
+                <div class="code-block code-block-display">
                     <span id="dice1">
-                    <p style="font-size: 1.5em">
+                    <p style="font-size: 0.75em">
                         <span class="font-soft-red"></span>
                         <span class="font-soft-green"></span>
                     </p>
-                    <p style="font-size: 2em"></p>
+                    <p></p>
                     </span>
-                    <button onclick="rollDice('dice1', 1, 12, 4)" style="font-size: 2em">
-                        Reroll!
+                    <button onclick="rollDice('dice1', 1, 12, 4)" class="button-flex">
+                        <img src="http://www.free-icons-download.net/images/white-dice-icons-36661.png" alt="roll">
+                        <p>Reroll!</p>
                     </button>
                 </div>
                 <span class="code-block code-block-inline font-yellow">2d6 - 3</span> Roll two six-sided dice and then subtract three from the end result.</p>
-                <div class="code-block" style="text-align: center;">
+                <div class="code-block code-block-display">
                     <span id="dice2">
-                    <p style="font-size: 1.5em">
+                    <p style="font-size: 0.75em">
                         <span class="font-soft-red"></span>
                         <span class="font-soft-green"></span>
                     </p>
-                    <p style="font-size: 2em"></p>
+                    <p></p>
                     </span>
-                    <button onclick="rollDice('dice2', 2, 6, -3)" style="font-size: 2em">
-                        Reroll!
+                    <button onclick="rollDice('dice2', 2, 6, -3)" class="button-flex">
+                        <img src="http://www.free-icons-download.net/images/white-dice-icons-36661.png" alt="roll">
+                        <p>Reroll!</p>
                     </button>
                 </div>
                 <p>Try it out yourself!</p>
-                <span class="code-block code-block-inline font-yellow"><input id="diceinput" class="textbox-discrete" type="text" placeholder="NdD+MOD"></span>
-                <div class="code-block" style="text-align: center;">
+                <span class="code-block code-block-inline font-yellow"><input id="diceinput" class="textbox-discrete" type="text" placeholder="NdD+MOD" onsubmit="rollDiceFromTextElement('dice3', 'diceinput')"></span>
+                <div class="code-block code-block-display">
                     <span id="dice3">
-                    <p style="font-size: 1.5em">
+                    <p style="font-size: 0.75em">
                         <span class="font-soft-red"></span>
                         <span class="font-soft-green"></span>
                     </p>
-                    <p style="font-size: 2em"></p>
+                    <p></p>
                     </span>
-                    <button onclick="rollDiceFromTextElement('dice3', 'diceinput')" style="font-size: 2em">
-                        Reroll!
+                    <button onclick="rollDiceFromTextElement('dice3', 'diceinput')" class="button-flex">
+                        <img src="http://www.free-icons-download.net/images/white-dice-icons-36661.png" alt="roll">
+                        <p>Reroll!</p>
                     </button>
                 </div>
                 <script>
@@ -130,6 +134,15 @@
                     rollDice('dice1', 1, 12, 4);
                     rollDice('dice2', 2, 6, -3);
                     rollDice('dice3', 0, 1, 0);
+
+                    var diceinput = document.getElementById("diceinput");
+
+                    diceinput.addEventListener("keyup", function(event) {
+                        if(event.keyCode === 13 && document.activeElement === diceinput) {
+                            rollDiceFromTextElement('dice3', 'diceinput');
+                        }
+                    });
+
                 </script>
                 <p>To try out basic dice rolling, check out <a href="https://www.google.com/search?q=dice+roller">Google's embedded dice roller</a>.</p>
             </div>

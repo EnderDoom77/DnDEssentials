@@ -47,6 +47,11 @@ img {
     font-weight: 400;
 }
 
+.code-block-display {
+    font-size: 2em;
+    text-align: center;
+}
+
 .code-block-inline {
     display: inline-block;
     margin: 0;
@@ -162,20 +167,35 @@ nav li {
 }
 
 button {
-    background: linear-gradient(90deg, #dd3300, #6600dd);
+    background: linear-gradient(90deg, #00ccff, #6600dd);
     color: white;
     padding: 0.4em;
     border-width: 5px;
     border-radius: 0.5em;
-    border-style: groove;
-    border-color: #00aa00;
-    transition: 0.3s border transform;
+    border-style: none;
+    transition: transform 0.3s ease-in-out;
+    font-size: inherit;
 }
 
     button:hover {
         transform: scale(1.3);
-        border-color: #33ff33;
         cursor: url(Cursor/PointerGreen32.png), auto;
+    }
+
+.button-flex {
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    height: 2em;
+    flex-wrap: wrap;
+}
+
+    .button-flex > img {
+        border-right: solid white 2px;
+        margin-right: 0.5em;
+        max-height: 2em;
+        width: auto;
+        padding-right: 0.5em;
     }
 
 .textbox-discrete {
