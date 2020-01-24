@@ -65,10 +65,11 @@
                 <h2>How to read dice rolls in rules.</h2>
                 <p>Generally, dice rolling in the rules is expressed in the following format:</p>
                 <div class="code-block">
-                    <p style="text-align: center; font-size: 2em"><span class="font-soft-red">[n]</span><span class="font-soft-blue">d</span><span class="font-soft-orange">[D]</span><span class="font-soft-green">(+mod)</span></p>
-                    <p><span class="font-soft-red">n = number of dice to roll.</span></p>
+                    <p style="text-align: center; font-size: 2em"><span class="font-soft-red">[N]</span><span class="font-soft-blue">d</span><span class="font-soft-orange">[D]</span><span class="font-soft-green">(+MOD)</span></p>
+                    <p><span class="font-soft-red">N = number of dice to roll.</span></p>
+                    <p><span class="font-soft-blue">d = die type separator.</span></p>
                     <p><span class="font-soft-orange">D = type of die to roll. e.g. A d6 is a 6-sided die.</span></p>
-                    <p><span class="font-soft-green">mod = a modifier, it's added to the result of the final roll to obtain the total.</span></p>
+                    <p><span class="font-soft-green">MOD = a modifier, it's added to the result of the final roll to obtain the total.</span></p>
                 </div>
                 <p>A few examples could be: <br>
                 <span class="code-block code-block-inline font-yellow">4d4</span>: Roll 4 four-sided dice and add them together.</p>
@@ -110,11 +111,6 @@
                         Reroll!
                     </button>
                 </div>
-                <script>
-                    rollDice('dice0', 4, 4);
-                    rollDice('dice1', 1, 12, 4);
-                    rollDice('dice2', 2, 6, 3);
-                </script>
                 <p>Try it out yourself!</p>
                 <span class="code-block code-block-inline font-yellow"><input id="diceinput" class="textbox-discrete" type="text" placeholder="NdD+MOD"></span>
                 <div class="code-block" style="text-align: center;">
@@ -129,6 +125,12 @@
                         Reroll!
                     </button>
                 </div>
+                <script>
+                    rollDice('dice0', 4, 4);
+                    rollDice('dice1', 1, 12, 4);
+                    rollDice('dice2', 2, 6, -3);
+                    rollDice('dice3', 0, 1, 0);
+                </script>
                 <p>To try out basic dice rolling, check out <a href="https://www.google.com/search?q=dice+roller">Google's embedded dice roller</a>.</p>
             </div>
         </div>
