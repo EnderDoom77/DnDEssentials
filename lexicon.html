@@ -10,6 +10,8 @@
 
     <link href="style.css" rel="stylesheet" type="text/css">
 
+    <script src="Scripts/search.js"></script>
+
     <style>
     
         h2 {
@@ -28,14 +30,14 @@
             border-top: 1px solid white;
         }
 
-        .searchbarholder {
+        #searchbarholder {
             height: 5rem;
             margin: 0 0 1em 0;
             padding: 0;
             position: relative;
         }
 
-        .searchbar {
+        #searchbar {
             position: absolute;
             left: 50%;
             height: 5rem;
@@ -45,17 +47,17 @@
             transition: 0.4s;
         }
 
-        .searchbar:hover {
+        #searchbar:hover {
             left: 25%;
             width: 50%;
         }
 
-        .searchbar:hover > .searchtxt {
+        #searchbar:hover > #searchtxt {
             width: 70%;
             padding-left: 1em;
         }
 
-        .searchbutton {
+        #searchbutton {
             float: right;
             width: 5rem;
             height: 5rem;
@@ -67,11 +69,11 @@
             transition: 0.2s;
         }
 
-        .searchbutton:hover {
+        #searchbutton:hover {
             transform: rotateZ(-290deg) scale(1.3);
         }
 
-        .searchtxt {
+        #searchtxt {
             border: none;
             background: none;
             outline: none;
@@ -108,15 +110,20 @@
                 </nav>
             </div>
             <div class="container container-base">
-                <div class="searchbarholder">
-                    <div class="searchbar" id="search_bar">
-                        <input class="searchtxt" type="text" placeholder="Type to search...">
+                <div id="searchbarholder">
+                    <div id="searchbar" id="search_bar">
+                        <input id="searchtxt" type="text" placeholder="Type to search...">
 
-                        <a class="searchbutton" href="#">
+                        <a id="searchbutton" href="#">
                             <img src="http://www.newdesignfile.com/postpic/2014/02/search-icon-windows-phone_249467.png" alt="search">
                         </a>
                     </div>
                 </div>
+                <script>
+                document.getElementById("searchtxt").addEventListener("keyup", function() {
+
+                })
+                </script>
                 <div class="entry" id="entry_ability">
                     <h2>Ability</h2>
 
