@@ -1,23 +1,23 @@
 function rollDice(displayID, n, d, mod = 0)
 {;
-    var numbers = new Array(Math.abs(n));
-    var rolls = "";
-    var modifier = "";
-    var result = 0;
+    let numbers = new Array(Math.abs(n));
+    let rolls = "";
+    let modifier = "";
+    let result = 0;
 
     for (let i = 0; i < Math.abs(n); i++) {
         numbers[i] = (Math.floor(Math.random() * d) + 1) * (n < 0 ? -1 : 1);
         if(numbers[i] === d && d >= 20)
         {
-            rolls += " <span class=\"highlight-crit\">" + numbers[i] + "</span> + ";
+            rolls += ` <span class="highlight-crit">${numbers[i]}</span> `;
         }
         else if(numbers[i] === 1 && d >= 20)
         {
-            rolls += " <span class=\"highlight-fail\">" + numbers[i] + "</span> + ";
+            rolls += ` <span class="highlight-fail">${numbers[i]}</span> `;
         }
         else if(numbers[i] === 1)
         {
-            rolls += " <span class=\"font-red\">" + numbers[i] + "</span> + ";
+            rolls += ` <span class="font-red">${numbers[i]}</span> `;
         }
         else
         {
@@ -39,12 +39,12 @@ function rollDice(displayID, n, d, mod = 0)
 
 function rollDiceFromText(displayID, str)
 {
-    var n = 1;
-    var dSeparatorIndex = 0;
-    var d = 4;
-    var mod = 0;
+    let n = 1;
+    let dSeparatorIndex = 0;
+    let d = 4;
+    let mod = 0;
 
-    var foundMod = false;
+    let foundMod = false;
 
     for (let i = 0; i < str.length; i++) {
         const element = str[i];
@@ -83,7 +83,7 @@ function rollDiceFromTextElement(displayID, textID)
 
 function add(list)
 {
-    var result = 0;
+    let result = 0;
 
     list.forEach(n => {
         result += n;

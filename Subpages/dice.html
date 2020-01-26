@@ -41,8 +41,8 @@
                 <p>Basic weapon damage is calculated by rolling the die related to the weapon and then adding your <a href="../lexicon.html#entry_strength">Strength</a> or <a href="../lexicon.html#entry_dexterity">Dexterity</a> modifier. For more information on attacks, check out <a href="attacks.html">Attacks</a>.</p>
                 <p class="note">Some d10s contain a 0 instead of a 10, this result is a 10 and <b>not</b> a 0.</p>
                 <div style="font-size: 0">
-                    <img style="width: 20%;" src="https://cdn11.bigcommerce.com/s-70184/images/stencil/350x350/products/2926/7133/opaque-black-gold-d4-top-read__88796.1522184156.jpg?c=2" alt="A four-sided die">
-                    <img style="width: 20%;" src="https://www.pinclipart.com/picdir/big/25-250576_dice-clipart-6-sided-dice-png-transparent-png.png" alt="A six-sided die">
+                    <img style="width: 20%;" src="../Media/d4.png" alt="A pair of differently styled four-sided die">
+                    <img style="width: 20%;" src="../Media/d6.png" alt="A six-sided die">
                     <img style="width: 20%;" src="https://upload.wikimedia.org/wikipedia/commons/5/55/Dice_rpg.png" alt="An eight-sided die">
                     <img style="width: 20%;" src="https://lh3.googleusercontent.com/nDFCHvO9bjEHPImhbMUwyd2RhWjBBK8B-zqhMPegqb8yjdY7g33uPU3oOiXHcwmdZA" alt="A ten-sided die">
                     <img style="width: 20%;" src="https://i.imgur.com/xCMEgW6.png" alt="A twelve-sided die">
@@ -135,7 +135,7 @@
                     rollDice('dice2', 2, 6, -3);
                     rollDice('dice3', 0, 1, 0);
 
-                    var diceinput = document.getElementById("diceinput");
+                    let diceinput = document.getElementById("diceinput");
 
                     diceinput.addEventListener("keyup", function(event) {
                         if(event.keyCode === 13 && document.activeElement === diceinput) {

@@ -120,9 +120,22 @@
                     </div>
                 </div>
                 <script>
-                document.getElementById("searchtxt").addEventListener("keyup", function() {
+                    let searchtxt = document.getElementById("searchtxt");
 
-                })
+                    searchtxt.addEventListener("keyup", function() {
+                        if(event.keyCode === 13 && document.activeElement === searchtxt)
+                        {
+                            Search();
+                        }
+                    });
+
+                    document.getElementById("searchbutton").addEventListener("click", function() {
+                        Search();
+                    });
+
+                    function Search() {
+                        searchEntries(searchtxt.value, "entry", "entry_", "no_result");
+                    }
                 </script>
                 <div class="entry" id="entry_ability">
                     <h2>Ability</h2>
@@ -219,6 +232,11 @@
                         <p>It revolves around the idea of lying or otherwise obscuring the truth to deceive others and get your way.</p>
                     </div>
                 </div>
+                <div class="entry" id="no_result">
+                    <h1>No results found!</h1>
+                    
+                    <p style="text-align: center">We rolled a 1 on our Investigation check!</p>
+                </div>
 
                 <!--Must add
                     STR, DEX, CON, INT, WIS
@@ -237,5 +255,23 @@
         </div>
     </div>
     </div>
+
+    <script>
+    
+    let entryLinks = document.getElementsByClassName("section-link");
+
+    for (const key in entryLinks) {
+        if (entryLinks.hasOwnProperty(key)) {
+            const link = entryLinks[key];
+
+            link.addEventListener("click", function() {
+                resetSearch("entry", "no_result");
+                }
+            );
+        }
+    }
+
+    </script>
+
 </body>
 </html>
