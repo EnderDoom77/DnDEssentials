@@ -9,15 +9,15 @@ function rollDice(displayID, n, d, mod = 0)
         numbers[i] = (Math.floor(Math.random() * d) + 1) * (n < 0 ? -1 : 1);
         if(numbers[i] === d && d >= 20)
         {
-            rolls += ` <span class="highlight-crit">${numbers[i]}</span> `;
+            rolls += ` <span class="highlight-crit">${numbers[i]}</span> + `;
         }
         else if(numbers[i] === 1 && d >= 20)
         {
-            rolls += ` <span class="highlight-fail">${numbers[i]}</span> `;
+            rolls += ` <span class="highlight-fail">${numbers[i]}</span> + `;
         }
         else if(numbers[i] === 1)
         {
-            rolls += ` <span class="font-red">${numbers[i]}</span> `;
+            rolls += ` <span class="font-red">${numbers[i]}</span> + `;
         }
         else
         {
