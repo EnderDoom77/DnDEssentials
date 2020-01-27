@@ -63,7 +63,7 @@ function rollDiceFromText(displayID, str)
         }
         else if ((element === "+" || element === "-") && dSeparatorIndex != 0) {
             foundMod = true;
-            d = parseInt(str.substring(dSeparatorIndex + 1, i - 1));
+            d = parseInt(str.substring(dSeparatorIndex + 1, i));
             mod = parseInt(str.substring(i + 1)) * (element === "-" ? -1 : 1);
         }
     }
