@@ -135,7 +135,7 @@
                     rollDice('dice2', 2, 6, -3);
                     rollDice('dice3', 0, 1, 0);
 
-                    let diceinput = document.getElementById("diceinput");
+                    const diceinput = document.getElementById("diceinput");
 
                     diceinput.addEventListener("keyup", function(event) {
                         if(event.keyCode === 13 && document.activeElement === diceinput) {
