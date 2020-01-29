@@ -28,8 +28,8 @@
                     <ul>
                         <li><a href="../index.html" title="Back to main menu.">HOME</a></li>
                         <li><a href="../lexicon.html" title="What jargon do we use to play D&D?">LEXICON REFERENCE</a></li>
-                        <li><a href="https://discord.gg/EhKZjjW" title="Join us on Discord!">DISCORD</a></li>
-                        <li><a href="https://www.dndbeyond.com/" title="Check out D&D beyond!">D&amp;D BEYOND</a></li>
+                        <li><a href="https://discord.gg/EhKZjjW" title="Join us on Discord!" target="_blank">DISCORD</a></li>
+                        <li><a href="https://www.dndbeyond.com/" title="Check out D&D beyond!" target="_blank">D&amp;D BEYOND</a></li>
                     </ul>
                 </nav>
             </div>
@@ -60,7 +60,7 @@
                 <p>A d100 roll consists of rolling 2d10 where one is marked as the "tens" die and the other is marked as the "units" die. Simply mash the numbers together to obtain your result.</p>
                 <p>The d10 contains a 0, charts generally contain "00" instead of "100", in either case, rolling two tens is a 100.</p>
                 <div class="section-block">
-                    <img class="img-minor" src="https://i.ebayimg.com/images/g/g6AAAOSwEzxYS2Zn/s-l300.jpg" alt="Two ten-sided die, one with the tens and the other with units.">
+                    <img class="img-minor" src="../Media/d100.png" alt="Two ten-sided die, one with the tens and the other with units.">
                 </div>
                 <h2>How to read dice rolls in rules.</h2>
                 <p>Generally, dice rolling in the rules is expressed in the following format:</p>
@@ -135,7 +135,7 @@
                     rollDice('dice2', 2, 6, -3);
                     rollDice('dice3', 0, 1, 0);
 
-                    let diceinput = document.getElementById("diceinput");
+                    const diceinput = document.getElementById("diceinput");
 
                     diceinput.addEventListener("keyup", function(event) {
                         if(event.keyCode === 13 && document.activeElement === diceinput) {

@@ -41,15 +41,16 @@
             position: absolute;
             left: 50%;
             height: 5rem;
-            width: auto;
+            width: 5rem;
+            min-width: 1em;
             border-radius: 5rem;
             background-color: #333;
-            transition: 0.4s;
+            transition: 0.4s ease-in-out;
         }
 
         #searchbar:hover {
-            left: 25%;
-            width: 50%;
+            left: 20%;
+            width: 60%;
         }
 
         #searchbar:hover > #searchtxt {
@@ -58,7 +59,8 @@
         }
 
         #searchbutton {
-            float: right;
+            position: absolute;
+            right: 0;
             width: 5rem;
             height: 5rem;
             border-radius: 50%;
@@ -66,7 +68,7 @@
             justify-content: center;
             align-items: center;
             padding: 0.75rem;
-            transition: 0.2s;
+            transition: 0.2s ease-in-out;
         }
 
         #searchbutton:hover {
@@ -84,6 +86,13 @@
             width: 0;
             color: white;
             font-size: 1.5em;
+        }
+
+        @media only screen and (max-width: 800px) {
+            #searchbar:hover {
+                left: 5%;
+                width: 90%;
+            }
         }
 
     </style>
@@ -104,8 +113,8 @@
                     <ul>
                         <li><a href="index.html" title="Back to main menu.">HOME</a></li>
                         <li>LEXICON REFERENCE</li>
-                        <li><a href="https://discord.gg/EhKZjjW" title="Join us on Discord!">DISCORD</a></li>
-                        <li><a href="https://www.dndbeyond.com/" title="Check out D&D beyond!">D&amp;D BEYOND</a></li>
+                        <li><a href="https://discord.gg/EhKZjjW" title="Join us on Discord!" target="_blank">DISCORD</a></li>
+                        <li><a href="https://www.dndbeyond.com/" title="Check out D&D beyond!" target="_blank">D&amp;D BEYOND</a></li>
                     </ul>
                 </nav>
             </div>
@@ -129,6 +138,10 @@
                         }
                     });
 
+                    searchtxt.addEventListener("click", function () {
+                        searchtxt.setSelectionRange(0, 0x7FFFFFFF)
+                    })
+
                     document.getElementById("searchbutton").addEventListener("click", function() {
                         Search();
                     });
@@ -151,7 +164,7 @@
                             <li><a href="#entry_charisma" class="section-link">Charisma (CHA)</a></li>
                         </ul>
                         <p>Abilities are used to compute nearly every modifier in D&amp;D, and they're the basis of <a href="#entry_ability-check" class="section-link">Ability Checks</a></p>
-                        <p>Abilities are also linked to <a href="#section_skill" class="section-link">skills</a> and <a href="spellcasting.html">spellcasting</a>.</p>
+                        <p>Abilities are also linked to <a href="#section_skill" class="section-link">skills</a> and <a href="Subpages/spellcasting.html">spellcasting</a>.</p>
                     </div>
                 </div>
                 <div class="entry" id="entry_ability-check">
@@ -183,7 +196,7 @@
                         <p>Armor class (AC) refers to the difficulty associated with hitting a creature.</p>
                         <p>AC is generally calculated based on Dexterity (your ability to dodge an attack), set by heavy armor (tough to pierce through and deal damage), or otherwise affected by magic equipment or natural armor for certain creatures.</p>
                         <p>There are also certain bonuses to AC, like that granted by a shield or by spells such as <a href="https://www.dndbeyond.com/spells/shield-of-faith" title="dndbeyond link">Shield of Faith</a></p>
-                        <p>To learn more about <a href="#entry_attack" class="section-link">attacking</a>, check out our <a href="attack.html">attacks page</a>.</p>
+                        <p>To learn more about <a href="#entry_attack" class="section-link">attacking</a>, check out our <a href="Subpages/attack.html">attacks page</a>.</p>
                     </div>
                 </div>
                 <div class="entry" id="entry_attack">
@@ -221,8 +234,8 @@
                                 <li><a href="#entry_persuasion" class="section-link">Persuasion</a></li>
                             </ul>
                         </p>
-                        <p>You can learn more about ability scores in relation to <a href="your-character.html">your character</a> as well as to gameplay in <a href="#entry_ability-check" class="section-link">Ability Checks</a>.</p>
-                        <p>Charisma is the <a href="spellcasting.html">spellcasting</a> ability of Bards, Paladins, Sorcerers, and Warlocks.</p>
+                        <p>You can learn more about ability scores in relation to <a href="Subpages/your-character.html">your character</a> as well as to gameplay in <a href="#entry_ability-check" class="section-link">Ability Checks</a>.</p>
+                        <p>Charisma is the <a href="Subpages/spellcasting.html">spellcasting</a> ability of Bards, Paladins, Sorcerers, and Warlocks.</p>
                     </div>
                 </div>
                 <div class="entry" id="entry_cr">
@@ -244,7 +257,7 @@
 
                     <div class="tab">
                         <p>A check's Difficulty Class is a value which must be beat in order for the check to succeed.</p>
-                        <p>Out of three types of <a href="dice.html">d20</a> checks in the game, two use Difficulty Class &mdash; <a href="#entry_ability-check" class="section-link">Ability Checks</a> and <a href="#entry_saving-throw" class="section-link">Saving Throws</a> &mdash; and one uses <a href="#entry_armor-class" class="section-link">Armor Class</a> &mdash; <a href="#entry_attack" class="section-link">Attacks</a>.</p>
+                        <p>Out of three types of <a href="Subpages/dice.html">d20</a> checks in the game, two use Difficulty Class &mdash; <a href="#entry_ability-check" class="section-link">Ability Checks</a> and <a href="#entry_saving-throw" class="section-link">Saving Throws</a> &mdash; and one uses <a href="#entry_armor-class" class="section-link">Armor Class</a> &mdash; <a href="#entry_attack" class="section-link">Attacks</a>.</p>
                     </div>
                 </div>
                 <div class="entry" id="entry_deception">

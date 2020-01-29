@@ -1,6 +1,6 @@
 function searchEntries(str, entryClass, prefix, noResultsID)
 {
-    let entries = document.getElementsByClassName(entryClass);
+    const entries = document.getElementsByClassName(entryClass);
 
     let occurances = 0;
 
