@@ -154,6 +154,14 @@
                         <p>Abilities are also linked to <a href="#section_skill" class="section-link">skills</a> and <a href="spellcasting.html">spellcasting</a>.</p>
                     </div>
                 </div>
+                <div class="entry" id="entry_ability-check">
+                    <h2>Ability Check</h2>
+
+                    <div class="tab">
+                        <p>An ability check is a type of d20 roll wherein you attempt to perform a somewhat challenging action using one of your six <a href="#entry_ability" class="section-link">abilities</a> to modify the result.</p>
+                        <p>An ability can further be a <a href="#entry_skill-check" class="section-link">Skill Check</a> if made using a <a href="#entry_skill" class="section-link">skill</a>, such as <a href="#entry_acrobatics" class="section-link">Acrobatics</a> or <a href="#entry_deception" class="section-link">Deception</a>.</p>
+                    </div>
+                </div>
                 <div class="entry" id="entry_ac">
                     <h2>AC</h2>
                     <div class="tab">
@@ -247,18 +255,45 @@
                         <p>It revolves around the idea of lying or otherwise obscuring the truth to deceive others and get your way.</p>
                     </div>
                 </div>
+                <div class="entry" id="entry_skill">
+                    <h2>Skill</h2>
+
+                    <div class="tab">
+                        <p>A skill is a specific activity or task for a character to perform, characters can be better at certain skills than others, this is mainly affected by two factors; the <a href="#entry_ability" class="section-link">ability</a> score tied to that skill and the level of <a href="#entry_proficiency" class="section-link">proficiency</a> for that character and skill.</p>
+                        <p>Skills in D&D 5e are the following:</p>
+                        <ul>
+                            <li><a href="#entry_acrobatics" class="section-link">Acrobatics</a> &mdash; tied to <a href="#entry_dexterity" class="section-link">Dexterity</a></li>
+                            <li><a href="#entry_animal-handling" class="section-link">Animal Handling</a> &mdash; tied to <a href="#entry_wisdom" class="section-link">Wisdom</a></li>
+                            <li><a href="#entry_arcana" class="section-link">Arcana</a> &mdash; tied to <a href="#entry_intelligence" class="section-link">Intelligence</a></li>
+                            <li><a href="#entry_athletics" class="section-link">Athletics</a> &mdash; tied to <a href="#entry_strength" class="section-link">Strength</a></li>
+                            <li><a href="#entry_deception" class="section-link">Deception</a> &mdash; tied to <a href="#entry_charisma" class="section-link">Charisma</a></li>
+                            <li><a href="#entry_history" class="section-link">History</a> &mdash; tied to <a href="#entry_intelligence" class="section-link">Intelligence</a></li>
+                            <li><a href="#entry_insight" class="section-link">Insight</a> &mdash; tied to <a href="#entry_wisdom" class="section-link">Wisdom</a></li>
+                            <li><a href="#entry_intimidation" class="section-link">Intimidation</a> &mdash; tied to <a href="#entry_charisma" class="section-link">Charisma</a></li>
+                            <li><a href="#entry_investigation" class="section-link">Investigation</a> &mdash; tied to <a href="#entry_intelligence" class="section-link">Intelligence</a></li>
+                            <li><a href="#entry_medicine" class="section-link">Medicine</a> &mdash; tied to <a href="#entry_wisdom" class="section-link">Wisdom</a></li>
+                            <li><a href="#entry_nature" class="section-link">Nature</a> &mdash; tied to <a href="#entry_intelligence" class="section-link">Intelligence</a></li>
+                            <li><a href="#entry_perception" class="section-link">Perception</a> &mdash; tied to <a href="#entry_wisdom" class="section-link">Wisdom</a></li>
+                            <li><a href="#entry_performace" class="section-link">Performance</a> &mdash; tied to <a href="#entry_charisma" class="section-link">Charisma</a></li>
+                            <li><a href="#entry_perception" class="section-link">Perception</a> &mdash; tied to <a href="#entry_wisdom" class="section-link">Wisdom</a></li>
+                            <li><a href="#entry_religion" class="section-link">Religion</a> &mdash; tied to <a href="#entry_intelligence" class="section-link">Intelligence</a></li>
+                            <li><a href="#entry_sleight-of-hand" class="section-link">Sleight of Hand</a> &mdash; tied to <a href="#entry_dexterity" class="section-link">Dexterity</a></li>
+                            <li><a href="#entry_stealth" class="section-link">Stealth</a> &mdash; tied to <a href="#entry_dexterity" class="section-link">Dexterity</a></li>
+                            <li><a href="#entry_survival" class="section-link">Survival</a> &mdash; tied to <a href="#entry_wisdom" class="section-link">Wisdom</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="entry" id="no_result">
                     <h1>No results found!</h1>
                     
                     <p style="text-align: center">We rolled a 1 on our Investigation check!</p>
                 </div>
-
+                    
                 <!--Must add
                     STR, DEX, CON, INT, WIS
                     Athletics, Acrobatics, Arcana, Animal Handling, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Sleight of Hand, Stealth, Survival.
                     Ability
                     Ability Check
-                    Attack
                     Skill
                     Skill Check
                     Saving Throw
@@ -275,14 +310,23 @@
     
     let entryLinks = document.getElementsByClassName("section-link");
 
-    for (const key in entryLinks) {
-        if (entryLinks.hasOwnProperty(key)) {
-            const link = entryLinks[key];
+    for (const link of entryLinks) {
+        link.addEventListener("click", function() {
+            resetSearch("entry", "no_result");
+            }
+        );
 
-            link.addEventListener("click", function() {
-                resetSearch("entry", "no_result");
-                }
-            );
+        if(document.getElementById(getTarget(link.href)) == null)
+        {
+            link.classList.add("link-non-implemented");
+        }
+    }
+
+    function getTarget(path)
+    {
+        for(c in path)
+        {            
+            if(path[c] === '#') return path.substring(c + 1);
         }
     }
 

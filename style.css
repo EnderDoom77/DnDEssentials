@@ -102,6 +102,15 @@ a {
         color: rgb(0, 68, 255)
     }
 
+.link-non-implemented {
+    color: red;
+}
+
+    .link-non-implemented:hover,
+    .link-non-implemented:focus {
+        color: darkred;
+    }
+
 .parallax {
     perspective: 1px;
     height: 100vh;
