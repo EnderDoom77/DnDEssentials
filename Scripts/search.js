@@ -51,7 +51,7 @@ function contains(str, segment)
 
     for (let i = 0; i < str.length; i++) {
         const char = str[i].toLowerCase();
-        if(char === segment[n].toLowerCase())
+        if(char === segment[n].toLowerCase() || segment[n] == " ")
         {
             if(++n >= segment.length)
             {

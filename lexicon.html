@@ -288,7 +288,7 @@
                             <li><a href="#entry_nature" class="section-link">Nature</a> &mdash; tied to <a href="#entry_intelligence" class="section-link">Intelligence</a></li>
                             <li><a href="#entry_perception" class="section-link">Perception</a> &mdash; tied to <a href="#entry_wisdom" class="section-link">Wisdom</a></li>
                             <li><a href="#entry_performace" class="section-link">Performance</a> &mdash; tied to <a href="#entry_charisma" class="section-link">Charisma</a></li>
-                            <li><a href="#entry_perception" class="section-link">Perception</a> &mdash; tied to <a href="#entry_wisdom" class="section-link">Wisdom</a></li>
+                            <li><a href="#entry_persuasion" class="section-link">Persuasion</a> &mdash; tied to <a href="#entry_charisma" class="section-link">Charisma</a></li>
                             <li><a href="#entry_religion" class="section-link">Religion</a> &mdash; tied to <a href="#entry_intelligence" class="section-link">Intelligence</a></li>
                             <li><a href="#entry_sleight-of-hand" class="section-link">Sleight of Hand</a> &mdash; tied to <a href="#entry_dexterity" class="section-link">Dexterity</a></li>
                             <li><a href="#entry_stealth" class="section-link">Stealth</a> &mdash; tied to <a href="#entry_dexterity" class="section-link">Dexterity</a></li>
@@ -296,7 +296,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="entry" id="no_result">
+                <div class="entry" id="no_result" style="display:none">
                     <h1>No results found!</h1>
                     
                     <p style="text-align: center">We rolled a 1 on our Investigation check!</p>
@@ -339,7 +339,7 @@
     {
         for(c in path)
         {            
-            if(path[c] === '#') return path.substring(c + 1);
+            if(path[c] === '#') return path.substring(c).substring(1);
         }
     }
 
